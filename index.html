@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+  <title>桂田農園 水耕栽培データ閲覧システム</title>
+  <link rel="stylesheet" href="stylesheet.css"/>
+  <script type="text/javascript">
+   function hyouji()
+  {
+    //テキストボックスの数値を変数に格納する
+    var num1=document.form1.yearv.options[document.form1.yearv.selectedIndex].value;
+    var num2=document.form1.monthv.options[document.form1.monthv.selectedIndex].value;
+    var num3=document.form1.weekv.options[document.form1.weekv.selectedIndex].value;
+    var fnm1="image/ttfig"+num1+num2+num3+".png";
+    document.ttfig20210701.src=fnm1;
+  }
+  </script>
+  </head>
+  <body  onload="hyouji();">
+    <noscript>
+      <p>Java Scriptを有効にしてください。</p>
+    </noscript>
+<h1>桂田農園 水耕栽培データ閲覧システム</h1>
+<h2 class="toumyou">豆苗の輪郭面積変化グラフ</h2>
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td><form name="form1">
+        <select name="yearv">
+          <option selected value="2021">2021</option>
+          <option   value="2050">2050</option>
+          <option   value="2051">2051</option>
+        </select>
+        年
+        <select name="monthv">
+          <option selected  value="07">07</option>
+          <option   value="01">01</option>
+        </select>
+        月
+        <select name="weekv">
+          <option value="01">01</option>
+          <option selected value="02">02</option>
+          <option   value="03">03</option>
+          <option   value="04">04</option>
+        </select>
+        週
+        <button type="button" onClick="hyouji();">表示 </button>
+      </form></td>
+  </tr>
+    <tr>
+    <td><p>温度計と定点カメラで豆苗の様子を週ごとに観察しています。</p>
+      <p>グラフは時系列にプロットしており、青線が温度です。後日、豆苗の輪郭面積も追加します。</p>
+      <p>データが足りないときはフリー画像か動物を表示します。</p></td>
+  </tr>
+  <tr>
+    <td><img name="ttfig20210701" src="image/ttfig20210701.png"></td>
+  </tr>
+  </table>
+<hr>
+<a href="https://katsurada-farm.amebaownd.com/">桂田農園トップページ</a>
+</body>
+</html>
